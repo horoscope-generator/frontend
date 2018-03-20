@@ -6,7 +6,6 @@ const CleanPlugin = require('clean-webpack-plugin');
 const UglifyPlugin = require('uglifyjs-webpack-plugin');
 
 const HTMLPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const webPackConfig = module.exports = {};
 
@@ -26,7 +25,7 @@ webPackConfig.plugins = [
     __API_URL__ : JSON.stringify(process.env.API_URL),
     __CDN_URL__ : JSON.stringify(process.env.CDN_URL),
   }),
-  new ExtractTextPlugin('bundle[hash].css'),
+
 ];
 
 if(PRODUCTION) {
@@ -45,20 +44,6 @@ webPackConfig.module = {
     },
     {
       test:  /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          'css-loader',
-          'resolve-url-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              includePaths: [`${__dirname}/src/style`],
-            },
-          },
-        ],
-      }),
     },
   ],
 };

@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/horoscope-generator/frontend#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.0",
-    "jest": "^22.4.2"
+    "jest": "^22.4.2",
+    "redux-devtools-extension": "^2.13.2",
+    "uglifyjs-webpack-plugin": "^1.2.4"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -42,11 +45,15 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-localstorage": "^1.0.0",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
     "superagent": "^3.8.2",
     "uuid": "^3.2.1",
+    "validator": "^9.4.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
