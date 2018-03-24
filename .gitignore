@@ -4,6 +4,10 @@ build
 
 db
 
+dist
+
+.cache
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
