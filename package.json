@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest -i --coverage",
     "watch": "webpack-dev-server --inline --hot",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.0",
     "jest": "^22.4.2",
+    "parcel-bundler": "^1.6.2",
     "redux-devtools-extension": "^2.13.2",
     "uglifyjs-webpack-plugin": "^1.2.4"
   },

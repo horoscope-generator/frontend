@@ -7,13 +7,13 @@ const __API_URL__ = process.env.API_URL;
 class App extends React.Component {
   render() {
 
-    superagent.get(`${__API_URL__}/lyrics`)
-      .then(songObject => {
-        console.log('songObject', songObject);
-        // let container = document.createElement('div');
-        // container.textContent = data.text;
-        // document.body.appendChild(container);
-      });
+    // superagent.get(`${__API_URL__}/lyrics`)
+    //   .then(songObject => {
+    //     console.log('songObject', songObject);
+    //     // let container = document.createElement('div');
+    //     // container.textContent = data.text;
+    //     // document.body.appendChild(container);
+    //   });
 
     return(
       <div className='app'>
