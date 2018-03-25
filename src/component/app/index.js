@@ -1,8 +1,8 @@
+import './_app.scss';
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 const superagent = require('superagent');
 const __API_URL__ = process.env.API_URL;
-
 
 class App extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class App extends React.Component {
       .then(songObject => {
         console.log('songObject', songObject.text);
         // let container = document.createElement('div');
-        // container.textContent = songObject.text;
+        // container.textContent = songObject.result[0];
         // document.body.appendChild(container);
       });
 
