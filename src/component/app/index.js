@@ -9,11 +9,13 @@ class App extends React.Component {
 
     superagent.get(`${__API_URL__}/lyrics`)
       .then(songObject => {
-        console.log('songObject', songObject.text);
-        // let container = document.createElement('div');
-        // container.textContent = songObject.result[0];
-        // document.body.appendChild(container);
+        console.log('songObject', JSON.parse(songObject.text).result[0].album);
+        let data = JSON.parse(songObject.text).result[0].lyrics;
+        let container = document.createElement('div');
+        container.textContent = data;
+        document.body.appendChild(container);
       });
+      
 
     return(
       <div className='app'>
@@ -27,6 +29,9 @@ class App extends React.Component {
                 </ul>
               </nav>
             </header>
+            <div id='horoscope-container'>
+            Horoscope Container
+            </div>
           </div>
         </BrowserRouter>
       </div>
