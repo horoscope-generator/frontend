@@ -22,15 +22,18 @@ class App extends React.Component {
 
         let randomIndex1 = Math.floor(Math.random() * dataArray.length);
         let randomIndex2 = Math.floor(Math.random() * dataArray.length);
+        let randomIndex3 = Math.floor(Math.random() * dataArray.length);
         
         let sign = 'Libra';
         let word1 = dataArray[randomIndex1];
         let word2 = dataArray[randomIndex2];
+        let word3 = dataArray[randomIndex3];
         console.log('word1', word1);
         console.log('word2', word2);
+        console.log('word3', word3);
         
         
-        let horoscope = `Assessment of others' ideas may be a main focus today, ${sign}. Group ${word1} could require your intellectual input. A ${word2} could come to you with an idea for a project of some kind. Writing or speaking may be involved in some way. Your friend isn't in a very practical frame of mind, so don't be surprised if the ideas don't seem very workable right now. Don't be discouraging, however. Your friend may surprise you!`;
+        let horoscope = `Assessment of others' ideas may be a main focus today, ${sign}. Group ${word1} could require your intellectual input. A ${word2} could come to you with an idea for a project of some kind. Writing or speaking may be involved in some way. Your friend isn't in a very practical frame of mind, so don't be let ${word3} if the ideas don't seem very workable right now. Don't be discouraging, however. Your friend may surprise you!`;
         
         let container = document.createElement('div');
         container.textContent = horoscope;
